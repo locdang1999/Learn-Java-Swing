@@ -1,12 +1,16 @@
 package notepad;
 
-import java.awt.HeadlessException;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 public class About extends JFrame {
 
     public About() {
-        setBounds();
+        setBounds(400, 100, 600, 500);
+
+        ImageIcon il = new ImageIcon(ClassLoader.getSystemResource("notepad/icons/windows.png"));
+        JLabel headericon = new JLabel(il);
+        add(headericon);
+
         setVisible(true);
     }
 
