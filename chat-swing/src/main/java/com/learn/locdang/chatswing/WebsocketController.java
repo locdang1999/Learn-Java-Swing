@@ -38,4 +38,10 @@ public class WebsocketController {
         System.out.println(username + " disconnected");
     }
 
+    @MessageMapping("/request-users")
+    public void requestUsers() {
+        sessionManager.broadcastActiveUsername();
+        System.out.println("Requesting Users");
+    }
+
 }
